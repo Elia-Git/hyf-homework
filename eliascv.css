@@ -1,0 +1,123 @@
+         /*CSS code for my homework week#1 (online cv) starts here*/
+         /*
+		Stylesheet for Hack Your Future
+		Designer: Elias Zerezghi Weldemichael */
+         /* css part for the most general elements starts here*/
+         
+         * {
+             box-sizing: border-box;
+             font-family: Arial, Helvetica, sans-serif;
+         }
+         
+         span {
+             color: blue;
+         }
+         
+         h2 {
+             color: brown;
+         }
+         
+         h3 {
+             font-weight: bold;
+         }
+         
+         li {
+             list-style-type: square;
+         }
+         /*CSS for heading of my cv starts here*/
+         
+         .heading {
+             background-color: #cba;
+             margin-bottom: -3px;
+             margin-left: 0px;
+             margin-right: 0px;
+             padding-top: 10px;
+             padding-bottom: 10px;
+             color: white;
+             text-align: center;
+         }
+         /*CSS for container part starts here*/
+         
+         .container {
+             display: flex;
+             margin: 0px;
+             justify-content: left;
+         }
+         /*CSS for information part on my cv starts here*/
+         
+         .my-information {
+             font-weight: bold;
+             background-color: #abc;
+             padding: 15px;
+         }
+         
+         .picture {
+             text-align: center;
+             display: block;
+             padding-left: 40px;
+         }
+         
+         img {
+             width: 150px;
+             height: 150px;
+             border-image: 2pc;
+         }
+         
+         .my-information li {
+             list-style-type: none;
+         }
+         
+         .socialmedia {
+             margin-top: inherit;
+             margin-left: 100px;
+             background-color: #caf;
+             display: inline-flex;
+         }
+         
+         .socialmedia i {
+             font-size: 20px;
+             padding: 10px;
+         }
+         
+         .socialmedia i:hover {
+             background-color: #caf;
+         }
+         /*CSS for the main part on my cv starts here*/
+         
+         .main-part {
+             padding-left: 25px;
+             background-color: #ccc;
+             margin-right: 0px;
+             padding: 15px;
+         }
+         
+         .learning-strategies a {
+             text-decoration: none;
+         }
+         /*Pseudo class css part starts here*
+
+        /* When link unvisited  */
+         
+         a:link {
+             color: #FF0000;
+         }
+         /*When link visited */
+         
+         a:visited {
+             color: rgb(233, 12, 233);
+         }
+         /* When mouse hover over the link */
+         
+         a:hover {
+             color: rgb(51, 255, 136);
+         }
+         /* When link focused */
+         
+         a:focus {
+             color: yellowgreen;
+         }
+         
+         h2:hover {
+             color: greenyellow;
+             zoom: 2;
+         }
