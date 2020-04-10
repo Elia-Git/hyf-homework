@@ -1,6 +1,6 @@
 ﻿/*CSS Code for mobile device (media query css code) starts here*/
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 600px) {
     body {
         align-items: center;
     }
