@@ -1,0 +1,50 @@
+﻿/*CSS Code for mobile device (media query css code) starts here*/
+
+@media screen and (max-width: 580px) {
+    body {
+        align-items: center;
+    }
+    .nav {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        padding-left: 20px;
+    }
+    .web-development {
+        display: flex;
+        flex-direction: column-reverse;
+        align-content: center;
+    }
+    .box1 {
+        padding-left: 20px;
+    }
+    .box2 {
+        padding-left: 20px;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+    .gallery-logos {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+    .gallery {
+        width: 89%;
+        padding-left: 20px;
+    }
+    .logo-types {
+        padding-right: 0px;
+        padding-left: 20px;
+        align-content: center;
+    }
+    .logos>a {
+        flex: 0 50%;
+        align-content: center;
+    }
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
