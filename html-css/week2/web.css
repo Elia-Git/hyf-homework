@@ -25,7 +25,7 @@ html {
     padding-top: 20px;
     padding-bottom: 30px;
     padding-right: 60px;
-    height: 150px;
+    height: fit-content;
 }
 
 .heading h1,
@@ -47,7 +47,7 @@ html {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-right: 60px;
-    height: 75px;
+    height: fit-content;
 }
 
 .nav>a {
