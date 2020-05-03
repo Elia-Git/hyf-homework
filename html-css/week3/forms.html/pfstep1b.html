@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,
+												 initial-scale=1.0" />
+    <title>Paymentform:Step1b</title>
+    <link rel="stylesheet" href="pfstep1b.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style></style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <button id="logo">Logo</button><button id="nav">Navigation</button>
+        </div>
+        <div class="heading">
+            <h1>Sign up to yourcustomtailor.com</h1>
+            <p>
+                we can't wait to help you improve your life-style and gain the attention from people around you!
+            </p>
+            <p>
+                Sign up below to save up to 70% on apparel, hand-bags and cosmetics. Our agents are busy picking the best offers that match your preferemces and style. Every week we will send you a hand-picked selection-we just need to know a few details about you first...
+            </p>
+        </div>
+        <div class="progress">
+            <h2>Step 1/4-tell us who you are?</h2>
+            <h3>Progress</h3>
+            <progress max="100" value="5"></progress>
+            <p>
+                Nice to meet you.Let's spend a minute to get to know each other? Please enter the following:
+            </p>
+        </div>
+        <div class="billing-address">
+            <form action="user.html" method="GET">
+                <div class="names">
+                    <label for="firstname">First Name*</label
+            ><input
+              type="text"
+              id="firstname"
+              name="first_name"
+              reqiured
+            /><label for="lastname">Last Name*</label
+            ><input type="text" id="lastname " name="last_name" reqiured />
+          </div>
+          <div class="country">
+            <label for="country">Country*</label
+            ><select width="50%" id="country">
+              <option value="countries">Select</option>
+              <option value="countries">Danmark</option>
+              <option value="countries">Norway</option>
+              <option value="countries">Finland</option>
+              <option value="countries">Sweden</option>
+            </select>
+          </div>
+          <div class="street">
+            <label for="street">Street address*</label
+            ><input type="text" id="street" name="street" reqiured /><label
+              for="postcode"
+              >Post Code*</label
+            ><input
+              type="letter"
+              id="postcode"
+              maxlength="4"
+              name="postcode"
+              reqiured
+            />
+          </div>
+          <p>
+            Use the same address for billing and shipping? Uncheck below to fill
+            out a seperate shipping address.
+          </p>
+          <label>Shipping Address</label><input type="checkbox" id="address" />
+            </form>
+            </div>
+            <div class="shipping-address">
+                <h4>Shipping address</h4>
+                <form>
+                    <div class="names">
+                        <label for="firstname">First Name*</label
+            ><input
+              type="text"
+              id="firstname"
+              name="first_name"
+              reqiured
+            /><label for="lastname">Last Name*</label
+            ><input type="text" id="lastname " name="last_name" reqiured />
+          </div>
+          <div class="country">
+            <label for="country">Country*</label
+            ><select width="50%" id="country">
+              <option value="countries">Select</option>
+              <option value="countries">Danmark</option>
+              <option value="countries">Norway</option>
+              <option value="countries">Finland</option>
+              <option value="countries">Sweden</option>
+            </select>
+          </div>
+          <div class="street">
+            <label for="street">Street address*</label
+            ><input type="text" id="street" name="street" reqiured /><label
+              for="postcode"
+              >Post Code*</label
+            ><input
+              type="letter"
+              id="postcode"
+              maxlength="4"
+              name="postcode"
+              reqiured
+            />
+          </div>
+          <div class="description">
+            <div class="profile">
+              <label>Profile description</label>
+                        <p>
+                            <span>Please provide a short<br />
+                  description of yourself to be<br />
+                  displayed on our social <br />community pages</span
+                >
+              </p>
+            </div>
+            <div class="textarea">
+              <textarea type="text" maxlength="500"> </textarea>
+            </div>
+          </div>
+        </form>
+        <button class="button" href="pfstep2.html">
+          Next Step
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
