@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paymentform:Step2</title>
+    <link rel="stylesheet" href="pfstep2.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style></style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <button id="logo">Logo</button>
+            <button id="nav">Navigation</button>
+        </div>
+        <div class="heading">
+            <h1>Sign up to yourcustomtailor.com</h1>
+            <h2>Step 2/4-tell us who you are?</h2>
+        </div>
+        <div class="progress">
+            <h3>Progress</h3>
+            <progress max="100" value="35"></progress>
+            <p>
+                We will probably need to stay in touch somehow.Let's know how we can help you?
+            </p>
+        </div>
+        <form>
+            <div class="mail">
+                <label for="email"> Email*</label>
+                <input type="email" id="email" name="email" required />
+                <label for="phone">Phone</label>
+                <input type="letter" maxlength="12" id="phone" name="phone" optional />
+            </div>
+            <div class="password">
+                <label for="password">Password*</label>
+                <input type="password" id="password" name="password" required />
+            </div>
+            <div class="re-password">
+                <label for="re-pw">Re-enter password*</label>
+                <input type="password" id="re-pw" name="password" required />
+            </div>
+            <p><span>I want to sign up for the newspaper</p></span></p>
+            <div class="newspaper">
+                <label for="weekly">Weekly newspaper</label>
+                <input type="checkbox" id="weekly" checked />
+                <label for="monthly">Monthly newspaper</label>
+                <input type="checkbox" id="monthly" unchecked />
+                <label for="don't">Don't send me news</label>
+                <input type="checkbox" id="don't" unchecked />
+            </div>
+            <button class="button" href="pfstep3.html">Next step</button>
+        </form>
+    </div>
+</body>
+
+</html>

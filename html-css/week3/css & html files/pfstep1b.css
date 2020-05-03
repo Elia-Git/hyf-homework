@@ -1,0 +1,179 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body,
+html {
+    font-size: 1.1rem;
+    margin: 0 auto;
+}
+
+#address:checked~.shipping-address {
+    display: none;
+}
+
+span {
+    font-size: 0.7rem;
+    font-style: italic;
+}
+
+
+/* CSS for Container starts here */
+
+.container {
+    margin: 0 auto;
+    border: #a9a9a9 1px solid;
+    padding-left: 1rem;
+    margin-left: 1.25rem;
+}
+
+.billing-address>div,
+.shipping-address>div {
+    padding-left: 0.75rem;
+}
+
+
+/* Css for logo starts here */
+
+.logo {
+    display: flex;
+    padding-top: 1.2rem;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: (1);
+}
+
+#nav {
+    margin-right: 1.25rem;
+    width: 25rem;
+}
+
+#logo {
+    width: 7rem;
+}
+
+#logo,
+#nav {
+    padding: 2rem;
+}
+
+
+/* Css for Heading starts here*/
+
+.heading p {
+    padding-right: 25rem;
+}
+
+
+/* css for progress starts here */
+
+.progress {
+    width: 100%;
+}
+
+progress {
+    width: 96%;
+    margin-right: 1rem;
+    height: 3.5rem;
+    background-color: gainsboro;
+}
+
+
+/* css for form starts here */
+
+form>div {
+    margin-left: 1rem;
+    margin-right: 0.25rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+input {
+    height: 2.5rem;
+    width: 16.5rem;
+    padding-left: 1rem;
+    margin-left: 1.1rem;
+    border: 3px solid lightgray;
+}
+
+label {
+    font-weight: bold;
+    margin-left: 1.5rem;
+}
+
+input[type="checkbox"] {
+    width: 8rem;
+    border: 3px solid lightgray;
+}
+
+form p {
+    margin-left: 0rem;
+}
+
+
+/* Css for billing & shipping address */
+
+.names {
+    padding-left: 4.9rem;
+}
+
+.country {
+    padding-left: 4.5rem;
+}
+
+.country select {
+    width: 15rem;
+    height: 3rem;
+    margin-left: 3.3rem;
+    border: 3px solid lightgray;
+}
+
+.country>option {
+    display: none;
+}
+
+.street {
+    padding-left: 2.6rem;
+}
+
+
+/* Shipping address */
+
+.description {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-right: 0rem;
+}
+
+.profile {
+    width: 19%;
+    align-items: start;
+}
+
+.profile p {
+    padding-left: 2rem;
+}
+
+h4 {
+    margin-left: 1rem;
+}
+
+textarea {
+    height: 9rem;
+    width: 45.5rem;
+    resize: none;
+    margin-left: 2.2rem;
+    border: 3px solid lightgray;
+}
+
+.button {
+    margin-left: 48.5rem;
+    margin-right: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1.7rem;
+    width: 17rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
