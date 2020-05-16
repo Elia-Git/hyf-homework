@@ -1,13 +1,12 @@
 const dogYearOfBirth = 2020; // value do not change
-let dogYearFuture = 2055; // Value can change with the same variable name
-let dogYear = dogYearFuture - dogYearOfBirth;
+const dogYearFuture = 2055; // Value can change with the same variable name
+const dogYear = dogYearFuture - dogYearOfBirth;
 
-var shouldShowResultInDogYears = "true";
+const shouldShowResultInDogYears = "true";
 
 //To test if the else condition works
-//var shouldShowResultInDogYears = "false";
 
-if (shouldShowResultInDogYears == "true") {
+if (shouldShowResultInDogYears === "true") {
     console.log(
         "Your dog will be " + dogYear + " dog years old in " + dogYearFuture
     );
