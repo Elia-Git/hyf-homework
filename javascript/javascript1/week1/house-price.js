@@ -1,5 +1,10 @@
 // Peter's case below
-const peterVolumeInMeters = 10 * 10 * 8;
+const peterWidthInMeters = 8;
+const peterHeightInMeters = 10;
+const peterDepthInMeters = 10;
+
+const peterVolumeInMeters =
+    peterWidthInMeters * peterHeightInMeters * peterDepthInMeters;
 const peterGardenSizeInM2 = 100;
 
 const peterHousePrice =
@@ -15,7 +20,13 @@ if (peterHousePrice >= 2500000) {
 }
 
 //Julia's case below
-const juliaVolumeInMeters = 5 * 11 * 8;
+
+const juliaWidthInMeters = 5;
+const juliaHeightInMeters = 8;
+const juliaDepthInMeters = 11;
+
+const juliaVolumeInMeters =
+    juliaWidthInMeters * juliaDepthInMeters * juliaHeightInMeters;
 const juliaGardenSizeInM2 = 70;
 
 const juliaHousePrice =
