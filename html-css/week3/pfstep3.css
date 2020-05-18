@@ -1,0 +1,130 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body,
+html {
+    font-size: 1.1rem;
+    margin: 0 auto;
+}
+
+
+/* CSS for Container starts here */
+
+.container {
+    margin: 0 auto;
+    border: #a9a9a9 1px solid;
+    padding-left: 2rem;
+    margin-left: 2.5rem;
+}
+
+.container>div {
+    padding-left: 1.5rem;
+}
+
+
+/* Css for logo */
+
+.logo {
+    display: flex;
+    padding-top: 1.2rem;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: (1);
+}
+
+#nav {
+    margin-right: 2.5rem;
+    width: 25rem;
+}
+
+#logo {
+    width: 7rem;
+}
+
+#logo,
+#nav {
+    padding: 2rem;
+}
+
+
+/* Css for Heading starts here*/
+
+.heading p {
+    padding-right: 25rem;
+}
+
+
+/* css for progress starts here */
+
+.progress {
+    width: 100%;
+}
+
+progress {
+    width: 94%;
+    margin-right: 1rem;
+    height: 3.5rem;
+    background-color: gainsboro;
+}
+
+
+/* css for form */
+
+form>div {
+    margin-left: 3rem;
+    margin-right: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+input {
+    height: 3rem;
+    width: 14rem;
+    padding-left: 0rem;
+    margin-left: 2.2rem;
+    border: 3px solid lightgray;
+}
+
+.apparal {
+    padding-left: 2.7rem;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.accesories {
+    padding-left: 1.4rem;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.handbags {
+    padding-left: 1.7rem;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+/* css for choices */
+
+.choices {
+    margin-left: 1.7rem;
+}
+
+.choices>input[type="checkbox"] {
+    width: 1rem;
+}
+
+.button {
+    margin-left: 48rem;
+    margin-top: 10rem;
+    margin-right: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1.7rem;
+    width: 17rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
