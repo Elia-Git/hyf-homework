@@ -13,4 +13,4 @@ function getEventWeekdays(eventDay) {
     let a = (day + eventDay) % 7;
     return "The event will be held on " + wholeWeek[a];
 }
-console.log(getEventWeekdays(7));
+console.log(getEventWeekdays(5));
