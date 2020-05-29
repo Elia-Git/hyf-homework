@@ -15,7 +15,7 @@ console.log(notes);
 // 2'nd function
 function getNote(id) {
     for (let i = 0; i < notes.length; i++) {
-        if (notes[i].id == id) {
+        if (notes[i].id === id) {
             return notes[i];
         }
     }
