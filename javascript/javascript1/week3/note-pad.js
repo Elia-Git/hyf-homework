@@ -1,13 +1,18 @@
 const notes = [];
 
 function saveNote(content, id) {
-    //Code goes here here
-    notes.push({ content: content, id: id });
+    // write some code here
+    notes.push({ content, id });
 }
 saveNote("Attend classes regularly", 1);
 saveNote("Pay attention to lessons", 2);
 saveNote("Ask for doubts", 3);
 saveNote("Do your homework", 4);
+saveNote("Take notes", 5);
+saveNote("Study hard", 6);
+saveNote("Eat regularly", 7);
+saveNote("Take enough rest", 8);
+saveNote("You will be successfull", 9);
 
 console.log("\n saveNote function outputs \n");
 console.log(notes);
@@ -15,23 +20,25 @@ console.log(notes);
 // 2'nd function
 function getNote(id) {
     for (let i = 0; i < notes.length; i++) {
+        //looping to search through array
         if (notes[i].id === id) {
+            //check where id matches
             return notes[i];
+        } else if (String(notes[i].id).trim() === "" || isNaN(notes[i].id)) {
+            console.log("Error!"); //check for spaces and if id is number type
         }
     }
-    return "Error!";
 }
-
-const firstNote = getNote(1); //Gives out { content: 'Attend classes regularly', id: 1 }
-// const firstNote = getNote(0); // gives out Error!
+const firstNote = getNote(10); //calling getNote() function
 console.log("\n getNote function outputs \n");
-//Gives out {content:"Eat regularly", id=7}
 console.log(firstNote);
 
 function logOutNotesFormatted() {
+    //function to display formatted array
+
     console.log("\n logOutNotesFormatted function outputs \n");
+
     for (let i = 0; i < notes.length; i++) {
-        // Logs out the formatted notes
         console.log(
             "The note with id: " +
             notes[i].id +
