@@ -13,10 +13,10 @@ addActivity(today, "Twitter", 14);
 
 console.log(activities);
 
-function showStatus(data) {
+function showStatus(activities) {
     let totalUsage = 0;
     const maxLimit = 90; // in minutes
-    for (let i = 0; i < data.length; ++i) {
+    for (let i = 0; i < activities.length; ++i) {
         totalUsage += activities[i].period;
     }
     console.log(
@@ -28,10 +28,10 @@ function showStatus(data) {
     );
     if (totalUsage >= maxLimit) {
         console.log("You have reached your limit, no more smartphoning for you!");
-    } else if (activities == "" || activities == null) {
-        console.log("Add some activities before calling showStatus");
+    } else if (activities.length === 0) {
+        console.log('Add some activities before calling showStatus');
+        return;
     }
-    return;
 }
 showStatus(activities);
 
