@@ -1,4 +1,4 @@
-const button = document.getElementById("myBtn");
+const button = document.getElementById("submit");
 const input = document.getElementById("name");
 const p = document.querySelector("p");
 const animals = [
@@ -17,7 +17,7 @@ const animals = [
 ];
 const users = [];
 button.addEventListener("click", function(event) {
-    const randomNumber = Math.floor(Math.random() * 12);
+    const randomNumber = Math.floor(Math.random() * animals.length);
     let mySprit = "";
     if (input.value !== "") {
         mySprit = p.innerText = input.value + " :- " + animals[randomNumber];
