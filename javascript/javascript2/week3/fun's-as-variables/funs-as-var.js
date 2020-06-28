@@ -29,9 +29,9 @@ normalFunction();
 
 // Functions as an object values
 
-const funObject = {
-    function: () => {
+const funObeject = {
+    "func": function() {
         console.log("Function as key pair value of an object");
     },
 };
-funObject.function();
+funObeject.func();
