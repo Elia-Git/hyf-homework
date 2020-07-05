@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS2-W3</title>
+    <style>
+        #map {
+            height: 100%;
+            border: 1px solid blueviolet;
+        }
+        
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .buttons {
+            border: 2px solid black;
+            background-color: burlywood;
+            padding-left: 10rem;
+            width: 42%;
+            margin-left: 10rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="buttons">
+        <h1>Warm ups!</h1>
+        <button id="delay">Click</button>
+        <button id="location">Log location</button>
+    </div>
+
+    <div id="map"></div>
+    <script src="warm-up.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?"></script>
+</body>
+
+</html>

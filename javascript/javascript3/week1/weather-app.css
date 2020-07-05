@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 60rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(rgb(169, 182, 184), rgb(42, 44, 68));
+    font-family: sans-serif;
+    /* color: aliceblue; */
+}
+
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 50%;
+    /* The width is the width of the web page */
+}
