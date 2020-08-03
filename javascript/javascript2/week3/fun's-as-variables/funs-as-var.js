@@ -30,7 +30,7 @@ normalFunction();
 // Functions as an object values
 
 const funObeject = {
-    "func": function() {
+    func: function() {
         console.log("Function as key pair value of an object");
     },
 };
