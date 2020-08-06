@@ -1,0 +1,15 @@
+/* Just simple css for display purpose */
+
+body {
+    background-color: rgb(155, 125, 115);
+}
+
+li {
+    margin-left: 15rem;
+    list-style-type: square;
+}
+
+h3 {
+    margin-left: 15rem;
+    color: rgb(3, 45, 48);
+}
