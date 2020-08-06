@@ -42,7 +42,7 @@ WHERE title LIKE '%database%' or description LIKE '%database%';
 -- 8. Get the title and status (as text) of all tasks
 SELECT task.Title, status.Name, status.ID
 FROM task
-  JOIN status ON task.status_id=status_id;
+  JOIN status ON task.status_id=status.id;
 
 -- 9. Get the name of each status, along with a count of how many tasks have that status
 SELECT status.Name, count(*)
