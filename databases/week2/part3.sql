@@ -1,7 +1,7 @@
 -- Get all the tasks assigned to users whose email ends in @spotify.com
 SELECT title, email
 FROM task
-  JOIN     user
+  JOIN      user
 on task.id=user.id
 WHERE user.email LIKE "%@spotify.com";
 
@@ -18,7 +18,7 @@ SELECT title, month(created), user.name Created_by
 FROM task
   JOIN user
   ON task.id=user.id
-WHERE user.name = 'Maryrose Meadows' AND task.created LIKE "%-09-%";
+WHERE user.name = 'Maryrose Meadows' AND month(created)=(09);
 
 
 -- Find how many

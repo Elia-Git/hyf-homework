@@ -8,39 +8,44 @@ SET @OLD_SQL_MODE=@@SQL_MODE
 , SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema Job_interview
+-- Schema mydb
+-- -----------------------------------------------------
+-- -----------------------------------------------------
+-- Schema job_interview
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema Job_interview
+-- Schema job_interview
 -- -----------------------------------------------------
 CREATE SCHEMA
-IF NOT EXISTS `Job_interview` DEFAULT CHARACTER
+IF NOT EXISTS `job_interview` DEFAULT CHARACTER
 SET utf8 ;
-USE `Job_interview`
+USE `job_interview`
 ;
 
 -- -----------------------------------------------------
--- Table `Job_interview`.`Interview`
+-- Table `job_interview`.`interview`
 -- -----------------------------------------------------
 CREATE TABLE
-IF NOT EXISTS `Job_interview`.`Interview`
+IF NOT EXISTS `job_interview`.`interview`
 (
-  `Id` INT NOT NULL,
+  `Id` INT NOT NULL AUTO_INCREMENT,
   `Start_time` TIME NOT NULL,
   `Finish_time` TIME NOT NULL,
   PRIMARY KEY
 (`Id`))
-ENGINE = InnoDB;
+ENGINE = InnoDB
+DEFAULT CHARACTER
+SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `Job_interview`.`Appointment`
+-- Table `job_interview`.`appointment`
 -- -----------------------------------------------------
 CREATE TABLE
-IF NOT EXISTS `Job_interview`.`Appointment`
+IF NOT EXISTS `job_interview`.`appointment`
 (
-  `Id` INT NOT NULL,
+  `Id` INT NOT NULL AUTO_INCREMENT,
   `Appointment_date` DATE NOT NULL,
   `Appointment_time` TIME NOT NULL,
   `Interview_Id` INT NOT NULL,
@@ -51,22 +56,20 @@ IF NOT EXISTS `Job_interview`.`Appointment`
   CONSTRAINT `fk_Appointment_Interview`
     FOREIGN KEY
 (`Interview_Id`)
-    REFERENCES `Job_interview`.`Interview`
-(`Id`)
-    ON
-DELETE NO ACTION
-    ON
-UPDATE NO ACTION)
-ENGINE = InnoDB;
+    REFERENCES `job_interview`.`interview`
+(`Id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER
+SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `Job_interview`.`User`
+-- Table `job_interview`.`user`
 -- -----------------------------------------------------
 CREATE TABLE
-IF NOT EXISTS `Job_interview`.`User`
+IF NOT EXISTS `job_interview`.`user`
 (
-  `Email` INT NOT NULL,
+  `Id` INT NOT NULL AUTO_INCREMENT,
   `First_name` VARCHAR
 (25) NOT NULL,
   `Last_name` VARCHAR
@@ -77,79 +80,71 @@ IF NOT EXISTS `Job_interview`.`User`
 (25) NOT NULL,
   `Phone` VARCHAR
 (45) NOT NULL,
+  `Email` VARCHAR
+(45) NULL,
   PRIMARY KEY
-(`Email`))
-ENGINE = InnoDB;
+(`Id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER
+SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `Job_interview`.`User_has_Interview`
+-- Table `job_interview`.`user_has_appointment`
 -- -----------------------------------------------------
 CREATE TABLE
-IF NOT EXISTS `Job_interview`.`User_has_Interview`
+IF NOT EXISTS `job_interview`.`user_has_appointment`
 (
-  `User_Email` INT NOT NULL,
-  `Interview_Id` INT NOT NULL,
-  PRIMARY KEY
-(`User_Email`, `Interview_Id`),
-  INDEX `fk_User_has_Interview_Interview1_idx`
-(`Interview_Id` ASC) VISIBLE,
-  INDEX `fk_User_has_Interview_User1_idx`
-(`User_Email` ASC) VISIBLE,
-  CONSTRAINT `fk_User_has_Interview_User1`
-    FOREIGN KEY
-(`User_Email`)
-    REFERENCES `Job_interview`.`User`
-(`Email`)
-    ON
-DELETE NO ACTION
-    ON
-UPDATE NO ACTION,
-  CONSTRAINT `fk_User_has_Interview_Interview1`
-    FOREIGN KEY
-(`Interview_Id`)
-    REFERENCES `Job_interview`.`Interview`
-(`Id`)
-    ON
-DELETE NO ACTION
-    ON
-UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `Job_interview`.`User_has_Appointment`
--- -----------------------------------------------------
-CREATE TABLE
-IF NOT EXISTS `Job_interview`.`User_has_Appointment`
-(
-  `User_Email` INT NOT NULL,
+  `User_Id` INT NOT NULL AUTO_INCREMENT,
   `Appointment_Id` INT NOT NULL,
   PRIMARY KEY
-(`User_Email`, `Appointment_Id`),
+(`User_Id`, `Appointment_Id`),
   INDEX `fk_User_has_Appointment_Appointment1_idx`
 (`Appointment_Id` ASC) VISIBLE,
   INDEX `fk_User_has_Appointment_User1_idx`
-(`User_Email` ASC) VISIBLE,
-  CONSTRAINT `fk_User_has_Appointment_User1`
-    FOREIGN KEY
-(`User_Email`)
-    REFERENCES `Job_interview`.`User`
-(`Email`)
-    ON
-DELETE NO ACTION
-    ON
-UPDATE NO ACTION,
+(`User_Id` ASC) VISIBLE,
   CONSTRAINT `fk_User_has_Appointment_Appointment1`
     FOREIGN KEY
 (`Appointment_Id`)
-    REFERENCES `Job_interview`.`Appointment`
-(`Id`)
-    ON
-DELETE NO ACTION
-    ON
-UPDATE NO ACTION)
-ENGINE = InnoDB;
+    REFERENCES `job_interview`.`appointment`
+(`Id`),
+  CONSTRAINT `fk_User_has_Appointment_User1`
+    FOREIGN KEY
+(`User_Id`)
+    REFERENCES `job_interview`.`user`
+(`Id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER
+SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `job_interview`.`user_has_interview`
+-- -----------------------------------------------------
+CREATE TABLE
+IF NOT EXISTS `job_interview`.`user_has_interview`
+(
+  `User_Id` INT NOT NULL AUTO_INCREMENT,
+  `Interview_Id` INT NOT NULL,
+  PRIMARY KEY
+(`User_Id`, `Interview_Id`),
+  INDEX `fk_User_has_Interview_Interview1_idx`
+(`Interview_Id` ASC) VISIBLE,
+  INDEX `fk_User_has_Interview_User1_idx`
+(`User_Id` ASC) VISIBLE,
+  CONSTRAINT `fk_User_has_Interview_Interview1`
+    FOREIGN KEY
+(`Interview_Id`)
+    REFERENCES `job_interview`.`interview`
+(`Id`),
+  CONSTRAINT `fk_User_has_Interview_User1`
+    FOREIGN KEY
+(`User_Id`)
+    REFERENCES `job_interview`.`user`
+(`Id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER
+SET = utf8;
 
 
 SET SQL_MODE

@@ -15,6 +15,6 @@ CREATE INDEX index_name ON student(name);
 
 ALTER TABLE class
  add STATUS ENUM("not-started", "ongoing", "finished"
-) NOT null ;
+) NOT null DEFAULT "not-started";
 select *
 from class;
