@@ -11,25 +11,50 @@ const promiseTimeOut = () => {
 };
 promiseTimeOut();
 
-// Get position
-let lat;
-let long;
-async function getCurrentLocation(postion) {
-    fetch(
-        `https://www.openstreetmap.org/#map=18/${lat}/${long}`
-    ).then((response) => response.json());
-    try {
-        let lat = postion.coords.latitude;
-        let long = postion.coords.longitude;
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition((position) => {
-                long = position.coords.longitude.toFixed(2);
-                lat = position.coords.latitude.toFixed(2);
-            });
-            console.log(lat, long);
-        }
-    } catch (error) {
-        console.log("error");
+// GET CURRENT LOCATION(POSITION)
+
+// function getCurrentLocation() {
+//     return new Promise((resolve) => {
+//         navigator.geolocation.getCurrentPosition((position) => {
+//             resolve(position);
+//             // reject(position);
+//         });
+//     });
+// }
+function getCurrentLocation() {
+    if (navigator.geolocation) {
+        return new Promise((resolve, reject) => {
+            try {
+                navigator.geolocation.getCurrentPosition((position) => {
+                    resolve(position);
+                });
+            } catch (error) {
+                reject(error);
+            }
+        });
     }
 }
-getCurrentLocation();
+
+//Promise way
+getCurrentLocation().then((response) => {
+    console.log("\n Promise way()\n-------------");
+    console.log(
+        "Latitude " +
+        response.coords.latitude.toFixed(4) +
+        "\nLongitude " +
+        response.coords.longitude.toFixed(4)
+    );
+});
+
+// Using async wait
+async function getCurrentLocationAsync() {
+    const result = await getCurrentLocation();
+    console.log("\nAsync way()\n-------------");
+    console.log(
+        "Latitude : " +
+        result.coords.latitude.toFixed(3) +
+        "\nLongitude : " +
+        result.coords.longitude.toFixed(3)
+    );
+}
+getCurrentLocationAsync();
