@@ -5,7 +5,7 @@ the resolveAfter seconds has passed.*/
 //Promise solved after set time
 // .then .catch method
 const resolvePromiseAfterTime = (resolveAfter) => {
-    const promise = new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
             setTimeout(() => {
                 resolve();
             }, resolveAfter * 1000);
@@ -15,10 +15,10 @@ const resolvePromiseAfterTime = (resolveAfter) => {
 };
 resolvePromiseAfterTime(7); // Logged out after 7 seconds
 
-// Async try  ctach method
+// Async try  catch method
 async function promiseAfterSetTime(resolveAfter) {
-    // const response = await Promise;
-    return new Promise((resolve, reject) => {
+    const response = await Promise;
+    return new Promise((resolve) => {
         setTimeout(() => {
             try {
                 resolve();
@@ -29,4 +29,4 @@ async function promiseAfterSetTime(resolveAfter) {
         }, resolveAfter * 1000);
     });
 }
-promiseAfterSetTime(7); // logged out after 8 seconds
+promiseAfterSetTime(8); // logged out after 8 seconds
