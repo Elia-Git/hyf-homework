@@ -62,6 +62,13 @@ SET Title = 'Pasta-mocoroni', Description= 'Macoroni'
 WHERE Id = 1;
 -- Delete a meal with any id, fx 1
 DELETE FROM Meal WHERE Id=8;
+------------
+UPDATE Meal
+SET max_reservations = 10
+WHERE Id = 3;
+------------
+-- Delete a meal with any id, fx 1
+DELETE FROM Meal WHERE Id=8;
 
 
 
@@ -72,11 +79,16 @@ FROM Meal
 WHERE Price <=13.00;
 
 -- Get meals that still has available reservations
-SELECT meal.*, reservation.number_of_guests AS Reserved_yet
-FROM meal
-   JOIN reservation ON meal.id=reservation.meal_id
-WHERE meal.max_reservations > reservation.number_of_guests
-GROUP BY meal.id;
+SELECT
+   meal.*,
+   sum(reservation.number_of_guests) AS Total_reserved_yet
+
+FROM
+   meal
+   JOIN
+   reservation ON meal.id = reservation.meal_id
+GROUP BY reservation.meal_id
+HAVING meal.max_reservations > SUM(reservation.number_of_guests);
 
 -- Get meals that partially match a title. Rød grød med will match the meal with the title Rød grød med fløde
 SELECT *
@@ -101,12 +113,13 @@ FROM meal
 WHERE review.stars>75
 GROUP BY review.meal_id;
 
--- Get reservations for a specific meal sorted by created_date
-SELECT meal.Id, meal.title, SUM(reservation.number_of_guests), reservation.Created_date AS Res_created_date
+-- Get reservations for a specific meal sorted by created_date(date of reservation)
+SELECT meal.Title, reservation.meal_Id, SUM(reservation.Number_of_guests), reservation.Created_date AS Res_created_date
 FROM reservation
-   LEFT JOIN meal ON reservation.meal_id=meal.id
-GROUP BY reservation.meal_id
-ORDER BY reservation.created_date ASC;
+   JOIN meal ON (meal.id=reservation.meal_id)
+GROUP BY reservation.created_date,meal.Title
+ORDER BY reservation.created_date;
+
 
 -- Sort all meals by average number of stars in the reviews
 SELECT meal.Id, meal.title , AVG(stars)

@@ -45,8 +45,11 @@ WHERE Id=13;
 
 -- Update a reservation with any id, fx 1. Update any attribute fx the title or multiple attributes
 UPDATE Reservation
-   SET Number_of_guests=25 , Contact_email="elias07@email.com"
+   SET Number_of_guests=7 , Contact_email="elias07@email.com"
    WHERE Id=13;
+UPDATE reservation
+  SET number_of_guests=6
+  WHERE Id=15;
 
 -- Delete a reservation with any id, fx 1
 DELETE FROM Reservation WHERE Id=11;
