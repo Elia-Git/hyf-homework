@@ -1,5 +1,5 @@
 //Create your own json file of interest
-// valid
+// Json file valid
 const myDetail = `{
 "firstName": "Elias",
 "lastName": "Weldemichael",
