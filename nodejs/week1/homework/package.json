@@ -1,0 +1,19 @@
+{
+    "name": "homework",
+    "version": "1.0.0",
+    "description": "Week1 -homework",
+    "main": "server.js",
+    "scripts": {
+        "dev": "nodemon src/backend/server.js",
+        "start": "node src/backend/server.js",
+        "test": "/test --runInBand"
+    },
+    "author": "Elias Weledemichael",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.4"
+    }
+}
