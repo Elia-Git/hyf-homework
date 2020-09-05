@@ -15,7 +15,7 @@ router.get("/", async(request, response) => {
                 }),
             };
         })
-        .map((meal) => meal.price < 20)
+        .map((meal) => meal.price <= 20)
     );
 });
 module.exports = router;
