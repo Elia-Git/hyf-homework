@@ -1,0 +1,19 @@
+{
+    "name": "warmup",
+    "version": "1.0.0",
+    "description": "\"warmup exercise add/multiply two random numbers\"",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon warmup/index.js",
+        "start": "node warmup/index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "\"Elias Weldemichael\"",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.4"
+    }
+}
