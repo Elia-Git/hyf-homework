@@ -17,7 +17,7 @@ app.get("/numbers/multiply/:first/:second", (request, response) => {
     const multiplication =
         parseInt(request.params.first) * parseInt(request.params.second);
     response.send(
-        `The multiplication* of : ${request.params.first} and ${request.params.second} is ` +
+        `The multiplication of : ${request.params.first} and ${request.params.second} is ` +
         multiplication
     );
 });
