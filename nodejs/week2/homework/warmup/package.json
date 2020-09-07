@@ -1,6 +1,7 @@
 {
     "name": "warmup",
     "version": "1.0.0",
+<<<<<<< HEAD
     "description": "\"warmup exercise add/multiply two random numbers\"",
     "main": "index.js",
     "scripts": {
@@ -14,6 +15,17 @@
         "express": "^4.17.1"
     },
     "devDependencies": {
+=======
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Elias",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1",
+>>>>>>> 3ecc9fad5fed9b7f35c4877757b9652f81cec406
         "nodemon": "^2.0.4"
     }
 }
