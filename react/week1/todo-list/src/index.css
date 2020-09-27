@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+code {
+  font-family: fantasy;
+  /* source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace; */
+}
+
+h1 {
+  font-style: italic;
+  color: rgb(21, 43, 8);
+  text-align: center;
+  background-image: linear-gradient(rgb(207, 108, 108), rgb(158, 158, 148));
+}
+
+p {
+  background-image: linear-gradient(rgb(207, 108, 108), rgb(158, 158, 148));
+  font-style: oblique;
+  background-position: bottom;
+  text-transform: capitalize;
+  color: rgb(16, 16, 124);
+  text-align-last: center;
+}
