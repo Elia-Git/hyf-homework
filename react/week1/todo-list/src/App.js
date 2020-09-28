@@ -12,7 +12,7 @@ class App extends Component {
       { description: "Shopping", deadline: "Saturday Sep 26 2020" },
       { description: "React class", deadline: "Sunday Sep 27 2020" },
       { description: "Work", deadline: "Monday Sep 28 2020" },
-      { description: "Covid-test", deadline: "Tuesday Sep 29 2020" },
+      { description: "Covid19-test", deadline: "Tuesday Sep 29 2020" },
     ];
 
     return <TodoList TodoList={WhatTodo} />;
