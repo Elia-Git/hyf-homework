@@ -1,0 +1,26 @@
+body {
+  background-color: rgb(199, 192, 184);
+}
+.App,
+h1 {
+  text-align: center;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 300px;
+  min-height: 600px;
+  background: #4f856b;
+  text-align: center;
+  margin: 128px auto;
+  border-radius: 10px;
+  padding-bottom: 32px;
+}
+input[type="text"] {
+  border-radius: "20px";
+  height: "200%";
+  width: 50%;
+  border-color: rgb(13, 121, 70);
+  background-color: burlywood;
+}
