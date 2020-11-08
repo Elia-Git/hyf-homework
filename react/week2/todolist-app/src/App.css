@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+}
+a {
+  color: #444;
+  text-decoration: none;
+}
+.container {
+  padding: 0 1rem;
+}
+.add-btn {
+  display: inline-block;
+  border: none;
+  background: rgb(31, 145, 65);
+  color: rgb(32, 14, 61);
+  padding: 2ox 20px;
+  cursor: pointer;
+}
+.add-btn:hover {
+  background: rgb(197, 156, 19);
+}
