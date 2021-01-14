@@ -15,7 +15,7 @@ router.get("/", async(request, response) => {
                 }),
             };
         })
-        .filter((meal) => meal.maxNumberOfGuests >= 7)
+        .map((meal) => meal.price <= 20)
     );
 });
 module.exports = router;
