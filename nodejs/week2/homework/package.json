@@ -1,0 +1,19 @@
+{
+    "name": "backend",
+    "version": "1.0.0",
+    "description": "\"Meal sharing app homework week2\"",
+    "main": "app.js",
+    "scripts": {
+        "test": "test server.js ",
+        "start": "node src/backend/server.js",
+        "dev": "nodemon src/backend/server.js"
+    },
+    "author": "\"Elias Weldemichael\"",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.4"
+    }
+}
