@@ -1,0 +1,20 @@
+{
+    "name": "warmup",
+    "version": "1.0.0",
+    "description": "\"Four mathematical oprations calculator\"",
+    "main": " index.js",
+    "scripts": {
+        "dev": "npm run server",
+        "start": "node ./warmup/index.js",
+        "server": "nodemon ./warmup/index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "\"Elias Weldemichael\"",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.4"
+    }
+}
